@@ -85,14 +85,10 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     // xhr.withCredentials = true;
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
-        console.log( xhr.status, xhr.statusText )
+        console.log( xhr.status, xhr.statusText);
         console.log(xhr.responseText);
-        document.getElementById("gform").style.display = "none"; // hide form
-        var thankYouMessage = document.getElementById("thankyou_message");
-        if (thankYouMessage) {
-          thankYouMessage.style.display = "block";
-        }
-        return;
+        document.getElementsByClassName("popup").style.display = "none"; // hide form
+
     };
     // url encode form data for sending as post data
     var encoded = Object.keys(data).map(function(k) {
