@@ -87,7 +87,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     xhr.onreadystatechange = function() {
         console.log( xhr.status, xhr.statusText);
         console.log(xhr.responseText);
-        document.getElementsByClassName("popup").style.display = "none"; // hide form
+        document.getElementsByClassName("popup")[0].style.display = "none"; // hide form
 
     };
     // url encode form data for sending as post data
